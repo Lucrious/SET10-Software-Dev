@@ -1,13 +1,19 @@
 import { Outlet } from "react-router-dom";
 
-export default function Layout(){
-    return(
+export default function Layout() {
+    return (
         <>
-            <header><h1>Test</h1></header>
-            <main>
-                <Outlet/>
-            </main>
-            <footer></footer>
+            <header>
+                <a href="/" aria-label="Gå til forsiden">
+                    Østfold Husflidslag
+                </a>
+            </header>
+
+            <Outlet />
+
+            <footer>
+                <p>Østfold Husflidslag</p>
+            </footer>
         </>
-    )
+    );
 }

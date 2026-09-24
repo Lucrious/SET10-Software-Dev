@@ -1,0 +1,28 @@
+.home {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    width: 100%;
+}
+
+.home__news {
+    min-width: 0;
+}
+
+/* Større skjermer */
+@media (min-width: 768px) {
+    .home {
+        grid-template-columns: minmax(14rem, 0.3fr) minmax(0, 1fr);
+        align-items: start;
+    }
+
+    .home__news {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .home-navigation {
+        grid-column: 1;
+        grid-row: 1;
+    }
+}
