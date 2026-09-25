@@ -1,0 +1,24 @@
+/* Veldig enkel basic css startpunkt for Newsfeed komponentet */
+
+#news-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    gap: 1rem;
+}
+
+.news-article{
+    background-color: aliceblue;
+    max-width: 20rem;
+    width: 100%;
+    padding: 0.25rem;
+
+    h2, p{
+        color: black;
+    }
+    img{
+        max-width: 20rem;
+        width: 100%;
+    }
+}
