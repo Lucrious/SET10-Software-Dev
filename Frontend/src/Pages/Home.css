@@ -12,6 +12,10 @@
     min-width: 0;
 }
 
+.home__news #news-section {
+    align-items: flex-start;
+}
+
 /* Større skjermer */
 @media (min-width: 768px) {
     .home {
