@@ -1,23 +1,24 @@
+import { Link } from "react-router-dom";
 import "./HomeNavigation.css";
 
 export default function HomeNavigation() {
     return (
         <nav className="home-navigation" aria-label="Hovedvalg">
-            <a className="home-navigation__item" href="/kurs">
+            <Link className="home-navigation__item" to="/kurs">
                 Kurs og aktiviteter
-            </a>
+            </Link>
 
-            <a className="home-navigation__item" href="/kontakt">
+            <Link className="home-navigation__item" to="/kontakt">
                 Kontakt oss
-            </a>
+            </Link>
 
-            <a className="home-navigation__item" href="/bli-medlem">
+            <Link className="home-navigation__item" to="/bli-medlem">
                 Bli medlem
-            </a>
+            </Link>
 
-            <a className="home-navigation__item" href="/sporsmal-og-svar">
+            <Link className="home-navigation__item" to="/sporsmal-og-svar">
                 Spørsmål og svar
-            </a>
+            </Link>
         </nav>
     );
 }
