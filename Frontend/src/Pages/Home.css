@@ -1,0 +1,35 @@
+.home {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    width: 100%;
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.home__news {
+    min-width: 0;
+}
+
+.home__news #news-section {
+    align-items: flex-start;
+}
+
+/* Større skjermer */
+@media (min-width: 768px) {
+    .home {
+        grid-template-columns: minmax(14rem, 0.3fr) minmax(0, 1fr);
+        align-items: start;
+    }
+
+    .home__news {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .home-navigation {
+        grid-column: 1;
+        grid-row: 1;
+    }
+}

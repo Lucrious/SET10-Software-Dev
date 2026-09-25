@@ -1,0 +1,32 @@
+.home-navigation {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    width: 100%;
+}
+
+.home-navigation__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 4rem;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: 2px solid var(--color-primary);
+    border-radius: 0.5rem;
+}
+
+.home-navigation__item:focus-visible {
+    outline: 3px solid currentColor;
+    outline-offset: 3px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .home-navigation__item:hover {
+        background-color: var(--color-primary);
+        color: var(--color-background);
+    }
+}
