@@ -9,14 +9,23 @@ function App() {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
+
+        {/* Midlertidig side for testing av Newsfeed */}
         <Route path="/testnewsfeed" element={<Newsfeed />} />
-        <Route
-          path="/aktuelt/:a"
-          element={<h1>Fremtidig dynamisk side for aktuelt/nyheter</h1>}
-        />
+
+        {/* Hovedsider */}
+        <Route path="/kurs" element={<h1>Kurs og aktiviteter</h1>} />
+        <Route path="/aktuelt" element={<h1>Aktuelt</h1>} />
+        <Route path="/kontakt" element={<h1>Kontakt oss</h1>} />
+
+        {/* Dynamiske sider */}
         <Route
           path="/kurs/:k"
           element={<h1>Fremtidig dynamisk side for kurs</h1>}
+        />
+        <Route
+          path="/aktuelt/:a"
+          element={<h1>Fremtidig dynamisk side for aktuelt/nyheter</h1>}
         />
       </Route>
     </Routes>

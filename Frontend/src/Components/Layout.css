@@ -1,4 +1,7 @@
 .site-header {
+    position: relative;
+    display: flex;
+    align-items: center;
     width: 100%;
     max-width: var(--content-max-width);
     margin: 0 auto;
@@ -6,12 +9,61 @@
     background-color: var(--color-background);
 }
 
+.site-header__logo-link {
+    display: block;
+    flex-shrink: 0;
+}
+
 .site-header__logo {
-    width: 100%;
-    max-width: 280px;
+    display: block;
+    width: clamp(150px, 45vw, 280px);
     height: auto;
 }
 
+/* Mobilmeny */
+.menu-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: auto;
+    padding: 0.5rem;
+    border: 0;
+    background: none;
+    color: var(--color-text);
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.site-navigation {
+    display: none;
+}
+
+.site-navigation--open {
+    position: absolute;
+    top: 100%;
+    right: 1rem;
+    left: 1rem;
+    z-index: 10;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    background-color: var(--color-background);
+    border: 1px solid var(--color-primary);
+}
+
+.site-navigation a {
+    padding: 1rem;
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Footer */
 .site-footer {
     width: 100%;
     margin-top: 3rem;
@@ -20,8 +72,75 @@
 }
 
 .site-footer__content {
+    display: flex;
+    justify-content: center;
     width: 100%;
     max-width: var(--content-max-width);
     margin: 0 auto;
     padding: 1.5rem 1rem;
+}
+
+.site-footer__navigation {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.site-footer__navigation a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+    .menu-button {
+        display: none;
+    }
+
+    .site-navigation,
+    .site-navigation--open {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        background: none;
+        border: 0;
+    }
+
+    .site-navigation a {
+        padding: 0;
+    }
+
+    .site-footer__content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 5rem;
+    padding-right: 15rem;
+    }
+
+    .site-footer__navigation {
+        flex-direction: row;
+        gap: 2rem;
+    }
+}
+
+/* Hover-effekt for enheter som støtter hover */
+@media (hover: hover) and (pointer: fine) {
+    .site-navigation a,
+    .site-footer__navigation a {
+        border-bottom: 2px solid transparent;
+        transition: border-color 0.2s ease;
+    }
+
+    .site-navigation a:hover,
+    .site-footer__navigation a:hover {
+        border-bottom-color: var(--color-primary);
+    }
 }

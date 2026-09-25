@@ -8,12 +8,12 @@ export default function HomeNavigation() {
                 Kurs og aktiviteter
             </Link>
 
-            <Link className="home-navigation__item" to="/kontakt">
-                Kontakt oss
-            </Link>
-
             <Link className="home-navigation__item" to="/bli-medlem">
                 Bli medlem
+            </Link>
+
+            <Link className="home-navigation__item" to="/kontakt">
+                Kontakt oss
             </Link>
 
             <Link className="home-navigation__item" to="/sporsmal-og-svar">
