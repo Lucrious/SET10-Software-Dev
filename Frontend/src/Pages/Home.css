@@ -3,6 +3,9 @@
     grid-template-columns: 1fr;
     gap: 2rem;
     width: 100%;
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
 .home__news {

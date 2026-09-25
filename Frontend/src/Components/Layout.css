@@ -1,0 +1,27 @@
+.site-header {
+    width: 100%;
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: var(--color-background);
+}
+
+.site-header__logo {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+}
+
+.site-footer {
+    width: 100%;
+    margin-top: 3rem;
+    border-top: 2px solid var(--color-primary);
+    background-color: var(--color-background);
+}
+
+.site-footer__content {
+    width: 100%;
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+}
