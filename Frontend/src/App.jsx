@@ -3,6 +3,7 @@ import './App.css'
 import Layout from './Components/Layout'
 import Home from './Pages/Home'
 import Newsfeed from './Components/Newsfeed'
+import NotFound from './Pages/NotFound'
 
 function App() {
   return (
@@ -25,9 +26,15 @@ function App() {
         />
         <Route
           path="/aktuelt/:a"
-          element={<h1>Fremtidig dynamisk side for aktuelt/nyheter</h1>}
-        />
+          element={<h1>Fremtidig dynamisk side for aktuelt/nyheter</h1>} />
+
+          {/* Side ikke funnet */}
+          <Route path="*" element={<NotFound />} />
+
       </Route>
+
+      
+
     </Routes>
   )
 }

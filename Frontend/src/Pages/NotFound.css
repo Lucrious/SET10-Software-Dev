@@ -1,0 +1,52 @@
+.not-found {
+    width: min(100% - 2rem, 1200px);
+    margin: 0 auto;
+    padding: 1.5rem 0;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.not-found__content {
+    text-align: left;
+}
+
+.not-found__content h1 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.not-found__content p {
+    margin-bottom: 2rem;
+}
+
+.not-found__link {
+    display: inline-block;
+    padding: 0.8rem 1.2rem;
+    border: 2px solid #b2374b;
+    border-radius: 4px;
+    color: #b2374b;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.not-found__link:hover {
+    background-color: #b2374b;
+    color: white;
+}
+
+.not-found__link:focus-visible {
+    outline: 3px solid #b2374b;
+    outline-offset: 3px;
+}
+
+@media (max-width: 767px) {
+    .not-found {
+        grid-template-columns: 1fr;
+    }
+
+    .not-found__content {
+        order: -1;
+    }
+}
