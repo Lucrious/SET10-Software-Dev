@@ -5,6 +5,7 @@ import Home from './Pages/Home'
 import Newsfeed from './Components/Newsfeed'
 import NotFound from './Pages/NotFound'
 import Courses from './Pages/Courses'
+import Course from './Pages/Course'
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
         {/* Dynamiske sider */}
         <Route
           path="/kurs/:k"
-          element={<h1>Fremtidig dynamisk side for kurs</h1>}
+          element={<Course />}
         />
         <Route
           path="/aktuelt/:a"
