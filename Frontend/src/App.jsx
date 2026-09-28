@@ -4,6 +4,7 @@ import Layout from './Components/Layout'
 import Home from './Pages/Home'
 import Newsfeed from './Components/Newsfeed'
 import NotFound from './Pages/NotFound'
+import Courses from './Pages/Courses'
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
         <Route path="/testnewsfeed" element={<Newsfeed />} />
 
         {/* Hovedsider */}
-        <Route path="/kurs" element={<h1>Kurs og aktiviteter</h1>} />
+        <Route path="/kurs" element={<Courses />} />
         <Route path="/aktuelt" element={<h1>Aktuelt</h1>} />
         <Route path="/kontakt" element={<h1>Kontakt oss</h1>} />
 

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import '../Style/Stylesheet.css'
+import '../Style/Newsfeed.css'
 
 export default function Newsfeed(){
 
