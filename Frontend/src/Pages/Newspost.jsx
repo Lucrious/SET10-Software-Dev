@@ -1,7 +1,9 @@
+import PageLayout from "../Components/PageLayout";
+
 export default function Newspost(){
     return(
-        <main>
+        <PageLayout>
             <p>Dynamisk side for nytt/aktuelt</p>
-        </main>
-    )
+        </PageLayout>
+    );
 }

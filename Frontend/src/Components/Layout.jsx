@@ -58,13 +58,84 @@ export default function Layout() {
 
             <footer className="site-footer">
                 <div className="site-footer__content">
-                    <nav
-                        className="site-footer__navigation"
-                        aria-label="Bunnmeny"
-                    >
-                        <Link to="/kontakt">Kontakt oss</Link>
-                        <Link to="/sporsmal-og-svar">Spørsmål og svar</Link>
-                    </nav>
+
+                    <div className="site-footer__columns">
+                        <section className="site-footer__section">
+                            <h3>
+                                <Link className="site-footer__heading-link" to="/kontakt">
+                                    Kontakt
+                                </Link>
+                            </h3>
+
+                            <p>
+                                Sentralbord:<br />
+                                <a href="tel:+4722008700">22 00 87 00</a>
+                            </p>
+
+                            <p>
+                                <a href="mailto:post@husflid.no">post@husflid.no</a>
+                            </p>
+
+                            <address>
+                                Øvre Slottsgate 2b<br />
+                                0157 Oslo
+                            </address>
+                        </section>
+
+                        <section className="site-footer__section site-footer__hours">
+                            <h3>Åpningstider</h3>
+
+                            <div className="site-footer__hours-list">
+                                <p>
+                                    <span>Mandag–tirsdag</span>
+                                    <span>10–13</span>
+                                </p>
+                                <p>
+                                    <span>Onsdag</span>
+                                    <span>Stengt</span>
+                                </p>
+                                <p>
+                                    <span>Torsdag–fredag</span>
+                                    <span>10–13</span>
+                                </p>
+                                <p>
+                                    <span>Stengt</span>
+                                    <span>11.30–12.00</span>
+                                </p>
+                            </div>
+                        </section>
+
+                        <section className="site-footer__section">
+                            <h3>Sosiale medier</h3>
+
+                            <ul className="site-footer__links">
+                                <li>
+                                    <a href="https://husflid.no/nyhetsbrev/">
+                                        Nyhetsbrev
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/norgeshusflidslag/">
+                                        Instagram
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.facebook.com/NorgesHusflidslag/">
+                                        Facebook
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/user/NorgesHusflidslag">
+                                        YouTube
+                                    </a>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+
+                    <div className="site-footer__bottom">
+                        <p>© Østfold Husflidslag</p>
+                    </div>
                 </div>
             </footer>
         </>

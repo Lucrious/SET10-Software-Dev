@@ -8,6 +8,8 @@ import Courses from './Pages/Courses'
 import Course from './Pages/Course'
 import Newspost from './Pages/Newspost'
 import Contact from './Pages/Contact'
+import Membership from './Pages/Membership'
+import FAQ from './Pages/FAQ'
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
         <Route path="/kurs" element={<Courses />} />
         <Route path="/aktuelt" element={<h1>Aktuelt</h1>} />
         <Route path="/kontakt" element={<Contact />} />
+        <Route path="/bli-medlem" element={<Membership />} />
+        <Route path="/sporsmal-og-svar" element={<FAQ />} />
 
         {/* Dynamiske sider */}
         <Route
