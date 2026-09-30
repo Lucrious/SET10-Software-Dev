@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import PageLayout from "../Components/PageLayout";
 
 export default function Courses(){
     {/* Veldig simpel placeholder kursstruktur for å teste siden før databasen kobles opp */}
@@ -17,21 +18,21 @@ export default function Courses(){
 
 ]
 
-    return(
-        <main>
+    return (
+        <PageLayout>
             <section>
-                {/* Mapper gjennom kursene, dette vil mappe gjennom en state som holder på kursene som har blitt hentet inn fra databasen når den er klar*/}  
+                {/* Mapper gjennom kursene, dette vil mappe gjennom en state som holder på kursene som har blitt hentet inn fra databasen når den er klar */}
                 {courses.map((course, index) => 
                     <article key={index} style={{border: "1px solid black", width: "10rem"}}>
-                        {/* Hvert enkelt kurs vil linke til sin egen kursside med å bruke kursets id. Det er mulig vi velger å bruke en type slug til linken senere*/}
+                        {/* Hvert enkelt kurs vil linke til sin egen kursside med å bruke kursets id. Det er mulig vi velger å bruke en type slug til linken senere */}
                         <Link to={`/kurs/${course.courseId}`}>
-                        <h3>{course.courseName}</h3>
-                        <p>{course.courseDate}</p>
-                        <p>{course.courseLocation}</p>
+                            <h3>{course.courseName}</h3>
+                            <p>{course.courseDate}</p>
+                            <p>{course.courseLocation}</p>
                         </Link>
                     </article>
                 )}
             </section>
-        </main>
+        </PageLayout>
     )
 }
