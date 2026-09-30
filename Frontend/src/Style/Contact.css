@@ -1,0 +1,26 @@
+#staff-section{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.person-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    margin: 1rem;
+    border: 3px solid black;
+    max-width: 250px;
+    height: 250px;
+
+    img{
+        width: 100%;
+        max-width: 250px;
+    }
+
+    p, h3, img{
+        margin: 0;
+    }
+}
