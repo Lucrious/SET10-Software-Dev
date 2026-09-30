@@ -7,6 +7,7 @@ import NotFound from './Pages/NotFound'
 import Courses from './Pages/Courses'
 import Course from './Pages/Course'
 import Newspost from './Pages/Newspost'
+import Contact from './Pages/Contact'
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
         {/* Hovedsider */}
         <Route path="/kurs" element={<Courses />} />
         <Route path="/aktuelt" element={<h1>Aktuelt</h1>} />
-        <Route path="/kontakt" element={<h1>Kontakt oss</h1>} />
+        <Route path="/kontakt" element={<Contact />} />
 
         {/* Dynamiske sider */}
         <Route
