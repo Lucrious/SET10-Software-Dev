@@ -27,5 +27,5 @@ dist-ssr
 *.env.local
 *.env
 *.mwb.bak
-
+*.bak
 
