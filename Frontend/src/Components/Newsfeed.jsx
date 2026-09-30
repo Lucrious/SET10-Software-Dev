@@ -4,7 +4,7 @@ import '../Style/Newsfeed.css'
 export default function Newsfeed(){
 
     //Placeholder array med objekter for å teste nyheter/aktuelt komponentet før databasen blir koblet sammen med frontend
-    const placeHolderNews = [{title: "Nytt strikkekurs", date:"28-sep-2026", img: "https://images.garnstudio.com/img/school/lessons/4-th.jpg", type: ["Aktuelt"], price: 2000},
+    const placeHolderNews = [{title: "Nytt strikkekurs", date:"28-sep-2026", img: "https://images.garnstudio.com/img/school/lessons/4-th.jpg", type: ["Kurs"], price: 2000},
                              {title: "Ny medlemsklubb", date: "29-sep-2026", img: "https://barshopen.no/images/list/hammar-club-soda-1-41203.png", type: ["Nyhet"]}
     ]
 
@@ -19,12 +19,20 @@ export default function Newsfeed(){
             {placeHolderNews?.map((post, index) => 
                                             
                                             <article className="news-article"  key={'news'+index}>
-                                            <Link to={"/"}>
+                                            {post.type == "Kurs" ? 
+                                            <Link to={`/kurs/${post.title}`}>
                                             <img src={post.img}></img>
                                             <p>{post.date} | {post.type}</p>
                                             <h2>{post.title}</h2>
                                             {post.price ? <p>{post.price} NOK</p> : null}
                                             </Link>  
+                                            : 
+                                            <Link to={`/aktuelt/${post.title}`}>
+                                            <img src={post.img}></img>
+                                            <p>{post.date} | {post.type}</p>
+                                            <h2>{post.title}</h2>
+                                            {post.price ? <p>{post.price} NOK</p> : null}
+                                            </Link> }
                                             </article>
                                             )}
         </section>

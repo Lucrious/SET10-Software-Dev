@@ -9,8 +9,8 @@ export default function Home() {
                 <h1>Siste nytt</h1>
                 <Newsfeed />
             </section>
-
-            <HomeNavigation />
+        <HomeNavigation />
+            
         </main>
     );
 }

@@ -6,6 +6,7 @@ import Newsfeed from './Components/Newsfeed'
 import NotFound from './Pages/NotFound'
 import Courses from './Pages/Courses'
 import Course from './Pages/Course'
+import Newspost from './Pages/Newspost'
 
 function App() {
   return (
@@ -28,7 +29,7 @@ function App() {
         />
         <Route
           path="/aktuelt/:a"
-          element={<h1>Fremtidig dynamisk side for aktuelt/nyheter</h1>} />
+          element={<Newspost />} />
 
           {/* Side ikke funnet */}
           <Route path="*" element={<NotFound />} />

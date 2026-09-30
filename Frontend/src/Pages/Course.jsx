@@ -8,7 +8,7 @@ export default function Course(){
     
     return(
         <main>
-            <p>Dette kommer til å bli kurssiden for kursid: {k}</p>
+            <p>Dette kommer til å bli kurssiden for kurs: {k}</p>
         </main>
     )
 }

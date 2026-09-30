@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import logo from "../assets/logo/nh-logo-standard-1.png";
 import "./Layout.css";
+import HomeNavigation from "./HomeNavigation";
 
 export default function Layout() {
     // Holder styr på om mobilmenyen er åpen eller lukket
@@ -46,7 +47,14 @@ export default function Layout() {
                 </nav>
             </header>
 
-            <Outlet />
+            {/* HomeNavigation her*/}
+                
+                 
+                <Outlet />
+                
+            
+
+           
 
             <footer className="site-footer">
                 <div className="site-footer__content">
