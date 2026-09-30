@@ -24,6 +24,8 @@ dist-ssr
 *.sw?
 
 *.mwb
+*.env.local
 *.env
+*.mwb.bak
 
 
