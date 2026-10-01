@@ -441,3 +441,5 @@ VALUES (1, 'Skrive tekst', '11:08:45', '2026-09-30', 1)
 INSERT INTO FAQ (faqID, sporsmal, svar)
 VALUES (1, 'hmm?', 'nei');
 */
+
+SELECT * FROM ARRANGOR;
