@@ -6,6 +6,6 @@ public class DatabaseCommands {
         // 1. Create an instance of your Getting class
         Getting getting = new Getting();
         // 2. Call the method to run the query
-        getting.getAllMembers();
+        getting.getAllCategories();
     }
 }
