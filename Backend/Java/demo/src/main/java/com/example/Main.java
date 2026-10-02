@@ -30,7 +30,7 @@ public class Main {
             ctx.json(ohaddress);
         });
 
-        app.get("/api/ohcontacts", ctx -> { // Returnerer adressen til ØH i Fredrikstad
+        app.get("/api/ohcontacts", ctx -> { // Returnerer kontaktpersonene til ØH
             var ohcontacts = getting.getOHContacts();
             ctx.json(ohcontacts);
         });
