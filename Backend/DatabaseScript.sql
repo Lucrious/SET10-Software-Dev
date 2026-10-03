@@ -133,6 +133,7 @@ CREATE TABLE IF NOT EXISTS `OstfoldHusflidslag`.`Venteliste` (
   `Bruker_brukerID` INT NULL, -- NULLable to support guest signups
   `gjestNavn` VARCHAR(45) NULL,   -- Fallback name if guest
   `gjestEpost` VARCHAR(45) NULL,  -- Fallback email if guest
+  `gjestTelefon` VARCHAR(8) NULL,
   PRIMARY KEY (`ventelisteID`),
   INDEX `fk_Venteliste_Kurs1_idx` (`Kurs_kursID` ASC) VISIBLE,
   INDEX `fk_Venteliste_Bruker1_idx` (`Bruker_brukerID` ASC) VISIBLE,
@@ -159,6 +160,7 @@ CREATE TABLE IF NOT EXISTS `OstfoldHusflidslag`.`Deltakelse` (
   `Bruker_brukerID` INT NULL, -- NULLable to support guests who don't have accounts
   `gjestNavn` VARCHAR(45) NULL,   -- Fallback name if guest
   `gjestEpost` VARCHAR(45) NULL,  -- Fallback email if guest
+  `gjestTelefon` VARCHAR(8) NULL,
   PRIMARY KEY (`deltakelseID`),
   INDEX `fk_Deltakelse_Kurs1_idx` (`Kurs_kursID` ASC) VISIBLE,
   INDEX `fk_Deltakelse_Bruker1_idx` (`Bruker_brukerID` ASC) VISIBLE,
@@ -310,7 +312,6 @@ INSERT INTO Byen (postnr, navn) VALUES (1530, 'Moss');
 INSERT INTO Byen (postnr, navn) VALUES (1811, 'Askim');
 INSERT INTO Byen (postnr, navn) VALUES (1825, 'Hobøl');
 */
-
 /*
 INSERT INTO Kategori (kategoriID, navn) VALUES (1, 'Bunad og Folkedrakt');
 INSERT INTO Kategori (kategoriID, navn) VALUES (2, 'Tekstil');
@@ -415,16 +416,14 @@ VALUES (2, 'Prisklasse MED UTSTYR', 12, 100, 1);
 /*
 INSERT INTO Deltakelse (deltakelseID, oppmotestatus, dato, Kurs_kursID)
 VALUES (1, 1, '2026-11-15', 1);
-*/
 
-/*
+
 INSERT INTO Venteliste (ventelisteID, pameldingsdato, `status`, Kurs_kursID)
 VALUES (1, '2026-11-10', 'Aktiv', 1);
-*/
 
-/*
+
 INSERT INTO Kjop (kjopID, kjopsDato, antall, totalPris, Bruker_brukerID, Kurs_kursID)
-VALUES (1, '2026-11-10', 3, 0, 0, 1);
+VALUES (1, '2026-11-10', 3, 0, 1, 1);
 */
 
 /*
@@ -441,5 +440,3 @@ VALUES (1, 'Skrive tekst', '11:08:45', '2026-09-30', 1)
 INSERT INTO FAQ (faqID, sporsmal, svar)
 VALUES (1, 'hmm?', 'nei');
 */
-
-SELECT * FROM ARRANGOR;
